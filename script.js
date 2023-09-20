@@ -1,1 +1,33 @@
+// Get a reference to the div element with id "browser-info"
+const browserInfoDiv = document.getElementById("browser-info");
+
+// Get the user agent string from the navigator object
+const userAgent = navigator.userAgent;
+
+// Use regular expressions to extract the browser name and version from the user agent string
+const browserName = (userAgent.match(/(Edge|Firefox|Chrome|Safari|Opera)\//) || [])[1];
+const versionMatch = userAgent.match(/(Version\/\d+|Chrome\/\d+|Firefox\/\d+|Edge\/\d+|Safari\/\d+|OPR\/\d+)/);
+const version = (versionMatch && versionMatch[0].split('/').pop()) || "unknown";
+
+// Create a message with the detected browser name and version
+const message = "You are using " + (browserName || "an unknown browser") + " version " + version;
+
+// Set the message as the content of the browser-info div
+browserInfoDiv.textContent = message;
 //your JS code here. If required.
+// Get a reference to the div element with id "browser-info"
+const browserInfoDiv = document.getElementById("browser-info");
+
+// Get the user agent string from the navigator object
+const userAgent = navigator.userAgent;
+
+// Use regular expressions to extract the browser name and version from the user agent string
+const browserName = (userAgent.match(/(Edge|Firefox|Chrome|Safari|Opera)\//) || [])[1];
+const versionMatch = userAgent.match(/(Version\/\d+|Chrome\/\d+|Firefox\/\d+|Edge\/\d+|Safari\/\d+|OPR\/\d+)/);
+const version = (versionMatch && versionMatch[0].split('/').pop()) || "unknown";
+
+// Create a message with the detected browser name and version
+const message = "You are using " + (browserName || "an unknown browser") + " version " + version;
+
+// Set the message as the content of the browser-info div
+browserInfoDiv.textContent = message;
